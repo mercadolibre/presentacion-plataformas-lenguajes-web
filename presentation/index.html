@@ -34,8 +34,9 @@
 <body class="deck-container">
 
 <div class="slide" id="title-slide">
-	<h1>Plataformas de Lenguajes Web</h1>
-	<h2>MercadoLibre</h2>
+	<h1><img src="../images/logo_ml_big.png" style="width:50%"/>
+Plataformas de Lenguajes Web
+</h1>
 </div>
 
 
@@ -154,7 +155,7 @@
             </ul>
 		</li>
 		<li>
-			<h3>Proceso de trabajo</h3>
+			<h3>Metodología</h3>
 		</li>
 	</ol>
 </div>
@@ -194,8 +195,7 @@ a.mostrarCantidad();</code></pre>
 <p>Ejemplos:
 <ul>
 <li>Java</li>
-<li>C</li>
-<li>C++</li>
+<li>C/C++</li>
 </ul>
 </p>
 </div>
@@ -212,7 +212,7 @@ a.mostrarCantidad();</code></pre>
 <div class="slide" id="lenguajes-sincronicos">
 	<h2>Programación sincrónica</h2>
 	<p>La forma en la que se lee el código es la forma en la que se ejecuta.</p>
-	<pre><code>
+	<pre><code style="font-size:13pt">
 import httplib
 conn = httplib.HTTPConnection("http://www.mercadolibre.com.ar")
 conn.request("GET","/")
@@ -225,7 +225,7 @@ print data
 <div class="slide" id="lenguajes-asincronicos">
 	<h2>Programación asincrónica</h2>
 	<p>Las operaciones I/O están manejadas por eventos.</p>
-	<pre><code>
+	<pre><code style="font-size:12pt">
     xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
             alert(xhr.responseText);
@@ -244,6 +244,51 @@ print data
     </ul>
 </div>
 
+<div class="slide" id="optimizar-servidor-stressar-ab">
+    <h2>Stressando el servidor</h2>
+    <h3>apache benchmark</h3>
+    <pre><code style="font-size:13pt">
+$ ab -n 100 -c 10 http://www.mercadolibre.com.ar/
+...
+Time taken for tests:   18.878 seconds
+Failed requests:        0
+   (Connect: 0, Receive: 0, Length: 0, Exceptions: 0)
+Requests per second:    88.53 [#/sec] (mean)
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+              Connect:      185  236  84.6    205     458
+              Processing:  1729 3318 1608.0   2889    5996
+              Waiting:      193  324 275.8    239    1100
+              Total:       1921 3554 1580.2   3100    6196
+Percentage of the requests served within a certain time (ms)
+  50%   3100
+  66%   3177
+  75%   5078
+  80%   5965
+  90%   6196
+  95%   6196
+  98%   6196
+  99%   6196
+ 100%   6196 (longest request)                     
+    </code></pre>
+</div>
+
+<div class="slide" id="optimizar-servidor-stressar-browsermob">
+    <h2>Stressando el servidor con el cloud</h2>
+    <h3>BrowserMob</h3>
+    <img src="../images/browsermob.png" height="70%" />
+</div>
+
+<div class="slide" id="optimizar-servidor-midiendo-newrelic">
+    <h2>Midiendo la performance del lado del servidor</h2>
+    <h3>NewRelic</h3>
+    <img src="../images/homes-frontend-new-relic.png" />
+</div>
+<div class="slide" id="optimizar-servidor-midiendo-cacti">
+    <h2>Midiendo la performance del lado del servidor</h2>
+    <h3>Cacti</h3>
+    <img src="../images/cacti.png" />
+</div>
 
 <div class="slide" id="perf-client-browsertools">
 	<h2>Herramientas para medir performance del navegador.</h2>
@@ -331,6 +376,33 @@ print data
 			<strong>Unificar recursos js/css</strong>: Es preferible una descarga grande a muchas chicas.
 		</li>
 	</ul>
+</div>
+
+<div class="slide" id="procesotrabajo">
+    <h2>Metodología de trabajo en MercadoLibre</h2>
+    <ul>
+        <li>TDD + Code Review + CI + Code Coverage
+        <img src="../images/tdd_cycle.jpg" style="width:30%"/>
+        </li>
+        <li>No existe una etapa de testing ni un equipo de QA.</li>
+        <li>La métrica de coverage es crítica y vamos subiendo gradualmente el umbral mínimo permitido para subir.</li>
+    </ul>
+</div>
+
+<div class="slide" id="preguntas">
+    <h2>Muchas gracias! ¿Preguntas?</h2>
+    <ul>
+        <p>
+            <strong>Dario Simonassi</strong><br/>
+            <a href="mailto:dario.simonassi@mercadolibre.com">dario.simonassi@mercadolibre.com</a><br/>
+            <a href="http://twitter.com/@ldsimonassi">@dsimonassi</a>
+        </p>
+        <p><strong>Jonathan Leibiusky</strong><br/>
+            <a href="mailto:jonathan.leibiusky@mercadolibre.com">jonathan.leibiusky@mercadolibre.com</a><br/>
+            <a href="http://twitter.com/@xetorthio">@xetorthio</a>
+        </p>
+    </ul>
+    <h5>Si querés trabajar en MercadoLibre, mandanos un mail a: <a href="mailto:empleos_arg@mercadolibre.com">empleos_arg@mercadolibre.com</a>!</h5>
 </div>
 
 
