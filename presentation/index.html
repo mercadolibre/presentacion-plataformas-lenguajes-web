@@ -135,6 +135,7 @@
 	</ul>
 </div>
 
+
 <div class="slide" id="agenda">
 	<h2>Agenda</h2>
 	<ol>
@@ -243,6 +244,94 @@ print data
     </ul>
 </div>
 
+
+<div class="slide" id="perf-client-browsertools">
+	<h2>Herramientas para medir performance del navegador.</h2>
+	<p>Herramientas que nos permiten analizar la performance del lado del cliente. Tiempos de DNS, conexión, descarga, render y ejecución de js.</p>
+	
+	<ul>
+		<li class="slide" id="perf-client-browsertools-firebug">
+			<p>
+				<strong>Firebug</strong>: Performance y depuración de javascript.
+				<img src="../images/yslow-for-website-design.jpg" width="%10" style="float:right"/>
+			</p>
+		</li>
+
+		<li class="slide" id="perf-client-browsertools-yslow">
+			<p>
+				<strong>Yahoo YSlow</strong>: Diagnostico general del funcionamiento de una página y consejos útiles para optimizarla.
+				
+			</p>
+		</li>
+
+		<li class="slide" id="perf-client-browsertools-dynatrace">
+			<p>
+				 <strong>Compuware dynaTrace</strong>: Performance de Internet Explorer.
+				 <img src="../images/ajax20_birthday_turtle.jpg" width="%10" style="float:right"/>
+			</p>
+		</li>		
+
+		<li class="slide" id="perf-client-browsertools-gps">
+			<p/>
+			<p>
+				<strong>Google Page Speed</strong>: 
+				<img src="../images/pagespeed-100.png" width="%10" style="float:right"/>
+			</p>
+		</li>
+
+	</ul>
+</div>
+
+
+<div class="slide" id="perf-client-webpagetest">
+	<h2>WebPageTest.org</h2>
+	<p>WebPageTest.Org es un servicio gratuito que nos permite probar el funcionamiento de nuestro sitio, incluyendo descarga, ejecución y render. Desde distintos puntos geográficos y con distintos browsers.
+	<p/>
+	<img src="../images/webpagetest1.png" width="%80" style="float:center"/>
+	</p>
+</div>
+
+
+<div class="slide" id="perf-client-webpagetest2">
+	<h2>WebPageTest.org</h2>
+	<img src="../images/webpagetest2.png" width="%80" style="float:center"/>
+</div>
+
+<div class="slide" id="perf-client-webpagetest2">
+	<h2>WebPageTest.org</h2>
+	<img src="../images/webpagetest3.png" width="%80"  style="padding-top:120px"/>
+</div>
+
+<div class="slide" id="perf-client-optimize">
+	<h2>Optimización de Browsers</h2>
+	<p>Algunas técnicas y estrategias para optimizar la velocidad que perciben los usuarios:</p>
+	
+	<ul>
+		<li class="slide" id="perf-client-cdn">
+			<strong>CDN</strong>: Akamai, CloudFront.
+		</li>
+		
+		<li class="slide" id="perf-client-caching">
+			<strong>HTTP Caching</strong>: Respetar los estandares de cacheo HTTP, utilizar infraestructura dedicada a aprovecharlo: Varnish/CDN.
+		</li>
+
+		<li class="slide" id="perf-client-multidomain">
+			<strong>Uso de multiples subdominios</strong>: Utilizar diferentes subdominios para los recursos permite aprovechar mejor el pool de conexiones del browser.
+		</li>
+
+		<li class="slide" id="perf-client-compression">
+			<strong>Compression</strong>: GZipear los contenidos: html, js, cs. No las imagenes.
+		</li>
+
+		<li class="slide" id="perf-client-ajax">
+			<strong>Ajax</strong>: Minimizar el tiempo en el cual el usuario ve contenido útil, y descargar los contenidos secundarios luego.
+		</li>
+		
+		<li class="slide" id="perf-client-unify">
+			<strong>Unificar recursos js/css</strong>: Es preferible una descarga grande a muchas chicas.
+		</li>
+	</ul>
+</div>
 
 
 <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
