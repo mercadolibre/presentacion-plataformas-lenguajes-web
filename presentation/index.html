@@ -243,6 +243,41 @@ print data
     </ul>
 </div>
 
+<div class="slide" id="optimizar-servidor-stressar-ab">
+    <h2>Stressando el servidor</h2>
+    <h3>apache benchmark</h3>
+    <pre><code>
+$ ab -n 100 -c 10 http://www.mercadolibre.com.ar/
+...
+Time taken for tests:   18.878 seconds
+Failed requests:        0
+   (Connect: 0, Receive: 0, Length: 0, Exceptions: 0)
+Requests per second:    88.53 [#/sec] (mean)
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+              Connect:      185  236  84.6    205     458
+              Processing:  1729 3318 1608.0   2889    5996
+              Waiting:      193  324 275.8    239    1100
+              Total:       1921 3554 1580.2   3100    6196
+Percentage of the requests served within a certain time (ms)
+  50%   3100
+  66%   3177
+  75%   5078
+  80%   5965
+  90%   6196
+  95%   6196
+  98%   6196
+  99%   6196
+ 100%   6196 (longest request)                     
+    </code></pre>
+</div>
+
+<div class="slide" id="optimizar-servidor-stressar-browsermob">
+    <h2>Stressando el servidor con el cloud</h2>
+    <h3>BrowserMob</h3>
+    <img src="../images/browsermob.png" height="70%" />
+</div>
+
 <div class="slide" id="optimizar-servidor-midiendo-newrelic">
     <h2>Midiendo la performance del lado del servidor</h2>
     <h3>NewRelic</h3>
